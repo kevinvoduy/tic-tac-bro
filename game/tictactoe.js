@@ -26,6 +26,11 @@ var board = {
 };
 
 // marks board
+function markBoard(position, mark) {
+  board[position] = mark.toUpperCase();
+}
+
+// print board
 function printBoard() {
   console.log('\n' +
   ' ' + board[1] + ' | ' + board[2] + ' | ' + board[3] + '\n' +
@@ -36,8 +41,23 @@ function printBoard() {
 }
 
 // check if input is int
+function isInt(value) {
+  var x = 0;
+  if (isNaN(value)) {
+    return false;
+  };
+  x = parseFloat(value);
+  return (x | 0) === x;
+}
 
 // validate move
+function validateMove(position) {
+  if (isInt(position) === true && board[position] === ' ') {
+    return true;
+  };
+  return false;
+}
+
 
 // win combinations
 
