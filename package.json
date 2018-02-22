@@ -1,0 +1,24 @@
+{
+  "name": "tic-tac-bro",
+  "version": "1.0.0",
+  "description": "command line tic tac toe game",
+  "main": "tictactoe.js",
+  "dependencies": {
+    "prompt": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node game/tictactoe.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinvoduy/tic-tac-bro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinvoduy/tic-tac-bro/issues"
+  },
+  "homepage": "https://github.com/kevinvoduy/tic-tac-bro#readme"
+}

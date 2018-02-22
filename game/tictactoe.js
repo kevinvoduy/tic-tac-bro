@@ -1,6 +1,6 @@
 // prompt is required for the game
 // https://github.com/flatiron/prompt
-var prompt = require('propmt');
+var prompt = require('prompt');
 
 /*
   game board
@@ -72,17 +72,19 @@ var winCombos = [
 
 // checks if play has made winning play
 function checkWinner(player) {
-  for (var i = 0; i < winCombos.length; i++) {
-    var marks = 0;
-    for (var j = 0; winCombos[i].lenght; j++) {
+  var i, j, mark;
+  for (i = 0; i < winCombos.length; i++) {
+    marks = 0;
+    for (j = 0; winCombos[i].lenght; j++) {
       if (board[winCombos[i][j]] === player) {
         mark++;
       };
       if (mark === 3) {
         return true;
       };
-    };
-  };
+    }
+  }
+  return false
 }
 
 // game logic
