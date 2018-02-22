@@ -2,9 +2,14 @@
 Command Line Tic-tac-toe Game
 
 ## install
-```npm install
+```
+npm install
 ```
 
 ## start
-```npm start
 ```
+npm start
+```
+
+## exit
+`ctrl + c`
