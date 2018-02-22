@@ -58,11 +58,34 @@ function validateMove(position) {
   return false;
 }
 
-
 // win combinations
+var winCombos = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+  [1, 4, 7],
+  [2, 5, 8],
+  [3, 6, 9],
+  [1, 5, 9],
+  [3, 5, 7],
+]
 
 // checks if play has made winning play
+function checkWinner(player) {
+  for (var i = 0; i < winCombos.length; i++) {
+    var marks = 0;
+    for (var j = 0; winCombos[i].lenght; j++) {
+      if (board[winCombos[i][j]] === player) {
+        mark++;
+      };
+      if (mark === 3) {
+        return true;
+      };
+    };
+  };
+}
 
 // game logic
+
 
 // print board at init of game
