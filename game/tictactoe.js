@@ -86,6 +86,36 @@ function checkWinner(player) {
 }
 
 // game logic
-
+function playersTurn(player) {
+  console.log('Its your turn ' + player);
+  prompt.start();
+  prompt.get(['position'], function(err, result) {
+    if (validateMove(result.position)) {
+      markBoard(result.position, player);
+      printBoard();
+      if (checkWinner(player)) {
+        console.log('Chicken Dinner');
+        return;
+      };
+      if (player === 'X') {
+        playersTurn('O');
+      } else {
+        playersTurn('X');
+      }
+    } else {
+      console.log('incorrect input, try again');
+      playersTurn(player);
+    }
+  });
+}
 
 // print board at init of game
+console.log('Game Start!: \n' +
+  ' 1 | 2 | 3 \n' +
+  ' --------- \n' +
+  ' 4 | 5 | 6 \n' +
+  ' --------- \n' +
+  ' 7 | 8 | 9 \n'
+);
+
+playersTurn('X');
